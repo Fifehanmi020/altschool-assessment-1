@@ -1,0 +1,34 @@
+// Problem 1 — Deep Equal (Easy)
+// Returns true if two objects have the same keys and values, checking nested objects too.
+
+function deepEqual(objA, objB) {
+  // Same value or same reference
+  if (objA === objB) return true
+
+  // If either is not an object (or is null), they can't be deeply equal at this point
+  if (typeof objA !== 'object' || typeof objB !== 'object' || objA === null || objB === null) {
+    return false
+  }
+
+  // An array and a plain object should never be equal
+  if (Array.isArray(objA) !== Array.isArray(objB)) return false
+
+  const keysA = Object.keys(objA)
+  const keysB = Object.keys(objB)
+
+  // Different number of keys means they are different
+  if (keysA.length !== keysB.length) return false
+
+  // Every key in A must exist in B with a deeply equal value
+  for (const key of keysA) {
+    if (!Object.hasOwn(objB, key) || !deepEqual(objA[key], objB[key])) {
+      return false
+    }
+  }
+
+  return true
+}
+
+console.log(deepEqual({ a: 1, b: { c: 2 } }, { a: 1, b: { c: 2 } })) // true
+console.log(deepEqual({ a: 1, b: { c: 2 } }, { a: 1, b: { c: 3 } })) // false
+console.log(deepEqual({ a: 1 }, { a: 1, b: 2 }))                     // false
