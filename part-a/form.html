@@ -1,189 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A copy of the AltSchool Africa application form.">
-  <title>Application Form | AltSchool First Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Semester Assessment</title>
 </head>
 <body>
-  <a href="#main-content">Skip to main content</a>
-
-  <header>
-    <nav aria-label="Global navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="form.html" aria-current="page">Application Form</a></li>
-      </ul>
+    <header>
+        <nav aria-label="Main Navigation">
+        <a href="./form.html">Home</a>
+        <a href="./index.html">AltSchool profile</a>
     </nav>
-    <h1>AltSchool Africa Application Form</h1>
-    <p>Start your tech career. Fill in your details below to apply.</p>
-  </header>
+    </header>
 
-  <main id="main-content">
-    <form action="#" method="post" aria-labelledby="form-heading">
-      <h2 id="form-heading">Create Your Account</h2>
-      <p>Fields marked with <abbr title="required">*</abbr> are required.</p>
+    <main>
+        <nav aria-label="Account Navigation">
+        <a href="./form.html">Sign Up</a>
+        <a href="#">Sign In</a>
+        </nav>
+        <h1>Sign Up</h1>
+        <p>Create an account to get started on your learning journey</p>
+        <aside>
+            <p>
+                <strong>Important:</strong>
+                Your names will appear on your certificate exactly as entered
+            </p>
+        </aside>
 
-      <fieldset>
-        <legend>Personal Information</legend>
+        <form action="#" method="post">
+            <label for="email">Email</label> 
+            <br>
+            <input type="email" id="email" name="email" placeholder="jon.doe@example.com" required>
+            
+            <br><br>
+            
+            <label for="First name">First Name</label>
+            <br>
+            <input type="text" id="first-name" name="First name" placeholder="John" required>
 
-        <p>
-          <label for="first-name">First Name <abbr title="required">*</abbr></label><br>
-          <input type="text" id="first-name" name="firstName" autocomplete="given-name" required>
-        </p>
+            <br><br>
 
-        <p>
-          <label for="last-name">Last Name <abbr title="required">*</abbr></label><br>
-          <input type="text" id="last-name" name="lastName" autocomplete="family-name" required>
-        </p>
+            <label for="Last name">Last Name</label>
+            <br>
+            <input type="text" id="last-name" name="Last name" placeholder="Doe" required>
 
-        <p>
-          <label for="email">Email Address <abbr title="required">*</abbr></label><br>
-          <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-hint">
-          <br><small id="email-hint">We will send your admission updates to this email.</small>
-        </p>
+            <br><br>
 
-        <p>
-          <label for="phone">Phone Number <abbr title="required">*</abbr></label><br>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+234 800 000 0000" required>
-        </p>
+            <label for="Phone number">Phone number</label>
+            <br>
+            <input type="tel" id="phone-number" name="Phone number" placeholder="+1234567890" required>
 
-        <p>
-          <label for="dob">Date of Birth <abbr title="required">*</abbr></label><br>
-          <input type="date" id="dob" name="dateOfBirth" autocomplete="bday" required>
-        </p>
+            <br><br>
 
-        <fieldset>
-          <legend>Gender <abbr title="required">*</abbr></legend>
-          <input type="radio" id="gender-male" name="gender" value="male" required>
-          <label for="gender-male">Male</label><br>
-          <input type="radio" id="gender-female" name="gender" value="female">
-          <label for="gender-female">Female</label><br>
-          <input type="radio" id="gender-other" name="gender" value="prefer-not-to-say">
-          <label for="gender-other">Prefer not to say</label>
-        </fieldset>
-      </fieldset>
+            <label for="Password">Password</label>
+            <br>
+            <input type="password" id="password" name="password" placeholder="********" required>
 
-      <fieldset>
-        <legend>Location</legend>
+            <p>
+                By clicking Create account, I agree to 
+                <a href="#">Terms of Use</a> 
+                and acknowledge that i have read the
+                 <a href="#">Privacy Policy.</a>
+            </p>
 
-        <p>
-          <label for="country">Country <abbr title="required">*</abbr></label><br>
-          <select id="country" name="country" autocomplete="country-name" required>
-            <option value="">-- Select your country --</option>
-            <option value="nigeria">Nigeria</option>
-            <option value="ghana">Ghana</option>
-            <option value="kenya">Kenya</option>
-            <option value="south-africa">South Africa</option>
-            <option value="rwanda">Rwanda</option>
-            <option value="egypt">Egypt</option>
-            <option value="other">Other</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="state">State / Region <abbr title="required">*</abbr></label><br>
-          <input type="text" id="state" name="state" autocomplete="address-level1" required>
-        </p>
-
-        <p>
-          <label for="city">City</label><br>
-          <input type="text" id="city" name="city" autocomplete="address-level2">
-        </p>
-      </fieldset>
-
-      <fieldset>
-        <legend>Programme Details</legend>
-
-        <p>
-          <label for="school">School <abbr title="required">*</abbr></label><br>
-          <select id="school" name="school" required>
-            <option value="">-- Select a school --</option>
-            <option value="engineering">School of Software Engineering</option>
-            <option value="data">School of Data</option>
-            <option value="product">School of Product</option>
-            <option value="creative">School of Creative Arts</option>
-            <option value="business">School of Business</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="track">Track <abbr title="required">*</abbr></label><br>
-          <select id="track" name="track" required>
-            <option value="">-- Select a track --</option>
-            <optgroup label="Software Engineering">
-              <option value="frontend">Frontend Engineering</option>
-              <option value="backend">Backend Engineering</option>
-              <option value="cloud">Cloud Engineering</option>
-              <option value="mobile">Mobile Engineering</option>
-            </optgroup>
-            <optgroup label="Data">
-              <option value="data-analysis">Data Analysis</option>
-              <option value="data-science">Data Science</option>
-              <option value="data-engineering">Data Engineering</option>
-            </optgroup>
-            <optgroup label="Product">
-              <option value="product-design">Product Design</option>
-              <option value="product-management">Product Management</option>
-            </optgroup>
-          </select>
-        </p>
-
-        <p>
-          <label for="referral">How did you hear about AltSchool?</label><br>
-          <select id="referral" name="referral">
-            <option value="">-- Select an option --</option>
-            <option value="social-media">Social Media</option>
-            <option value="friend">Friend or Family</option>
-            <option value="search">Google Search</option>
-            <option value="event">Event</option>
-            <option value="other">Other</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="motivation">Why do you want to join AltSchool?</label><br>
-          <textarea id="motivation" name="motivation" rows="5" cols="40"></textarea>
-        </p>
-      </fieldset>
-
-      <fieldset>
-        <legend>Account Security</legend>
-
-        <p>
-          <label for="password">Password <abbr title="required">*</abbr></label><br>
-          <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required aria-describedby="password-hint">
-          <br><small id="password-hint">Use at least 8 characters.</small>
-        </p>
-
-        <p>
-          <label for="confirm-password">Confirm Password <abbr title="required">*</abbr></label><br>
-          <input type="password" id="confirm-password" name="confirmPassword" autocomplete="new-password" minlength="8" required>
-        </p>
-      </fieldset>
-
-      <p>
-        <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms">I agree to the AltSchool Africa Terms of Service and Privacy Policy <abbr title="required">*</abbr></label>
-      </p>
-
-      <p>
-        <button type="submit">Create Account</button>
-        <button type="reset">Clear Form</button>
-      </p>
-
-      <p>Already have an account? <a href="https://portal.altschoolafrica.com/auth/signin?callbackUrl=/">Sign in</a></p>
-    </form>
-  </main>
-
-  <footer>
-    <address>
-      Oye Fifehanmi<br>
-      Ogun State, Nigeria<br>
-      Email: <a href="mailto:oluwafifehanmioye@gmail.com">oluwafifehanmioye@gmail.com</a>
-    </address>
-    <p><small>&copy; 2026 Oye Fifehanmi. All rights reserved.</small></p>
-  </footer>
+            <button type="submit">Create account</button>
+            <p>OR</p>
+            <button type="button">Login with Google</button>
+        </form>
+    </main>
+   
+    <footer>
+        <p>Address; Ogun State, Nigeria</p>
+        <p>&copy; 2026, Oye David Oluwafifehanmi. All rights reserved</p>
+    </footer>
 </body>
 </html>
